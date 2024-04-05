@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flight booking system </title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+            font-family: Arial, sans-serif; /* Use Arial font */
+        }
+
+        h1 {
+            color: #007bff; /* Blue heading text */
+        }
+
+        .container {
+            max-width: 600px; /* Limit width to 600px */
+            margin: 0 auto; /* Center the container */
+            padding: 20px; /* Add padding */
+            background-color: #fff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Blue submit button */
+            color: #fff; /* White text */
+            cursor: pointer; /* Add pointer cursor */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Light gray header background */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>flight booking reservation system</h1>
+        <label for="flightid">Flight ID:</label><br>
+        <input type="text" name="flightid" id="flightid"><br>
+        
+        <label for="d_l">Departure location:</label><br>
+        <input type="text" name="d_l" id="d_l"><br>
+        
+        <label for="a_l">Arrival location:</label><br>
+        <input type="text" name="a_l" id="a_l"><br>
+        
+        <label for="d_t">Departure date and time:</label><br>
+        <input type="text" name="d_t" id="d_t"><br>
+		
+		<label for="np">Number of passengers:</label><br>
+        <input type="text" name="np" id="np"><br>
+        
+        <br>
+        <input type="submit" id="saveflight" value="Book Flight">
+        <p id="flightSaved"></p>
+        
+        <br>
+        <input type="submit" id="getflight" value="View all Flights with Status">
+        <br><br>
+        <div id="showflight">
+            <table id="flightTable">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:20%">
+                    <col style="width:20%">
+					<col style="width:20%">
+                    <col style="width:20%">
+					<col style="width:20%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Flight ID</th>
+                        <th>Departure location</th>
+                        <th>Arrival location</th>
+                        <th>Departure date and time</th>
+						<th>Number of passengers</th>
+						<th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- flight data will be displayed here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+</body>
+</html>
